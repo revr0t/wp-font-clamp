@@ -1,0 +1,163 @@
+ **Project Scope Document: Font Clamp Calculator WordPress Plugin**
+
+---
+
+**Project Title:** Font Clamp Calculator - Responsive Typography Generator Plugin for WordPress
+
+**Client:** Revrot Web Design Ireland
+
+**Version:** 3.0 (Complete UI + Enhanced Functionality)
+
+**Prepared By:** ChatGPT (OpenAI), based on feature discussions with Trevor Hughes
+
+**Date:** 3 June 2025
+
+---
+
+### **1. Overview**
+
+The Font Clamp Calculator is a WordPress admin plugin that provides a modern, visually rich, and user-friendly interface to help designers and developers create responsive `clamp()`-based font sizing for fluid typography. The plugin generates CSS code using `clamp()` logic and allows for export, preview, and theme integration of font styles using `rem`, `vw`, and `px` units.
+
+This scope outlines all features, settings, and technical details, incorporating both the original script and the comprehensive updates requested.
+
+---
+
+### **2. Core Goals**
+
+* Provide an accessible and fluid design tool for generating responsive font sizes.
+* Make it easy for developers to apply modern CSS typography in WordPress themes.
+* Deliver a best-in-class interface for font size scaling using `clamp()`.
+* Allow export, preview, and theme integration of generated styles.
+
+---
+
+### **3. Key Features & Functionalities**
+
+#### **A. Tabbed UI Navigation**
+
+The plugin interface includes a tabbed layout for organizing the following views:
+
+* **Class View**
+* **Tag View**
+* **Scale View**
+
+#### **B. Settings Panel**
+
+* Input Unit Type:
+
+  * REM (default)
+  * PX
+* Root Size (e.g., 16px)
+* Minimum Viewport Width (e.g., 375px)
+* Maximum Viewport Width (e.g., 1100px)
+
+#### **C. Class-based Font Calculator**
+
+* Editable table of font size classes:
+
+  * Class Name (e.g., `medium`, `large`, `xlarge`)
+  * Minimum Size (e.g., 1.2rem)
+  * Maximum Size (e.g., 2rem)
+  * Line Height (optional, default 1.4em)
+* Ability to:
+
+  * Add new rows
+  * Edit/delete existing rows
+  * Drag and reorder classes
+* Output:
+
+  * `clamp()` CSS for each class
+  * Combined CSS block for all classes
+
+#### **D. Tag-based Font Calculator**
+
+* Mapping for HTML tags (h1-h6, p, li, blockquote, etc.)
+* Similar input/output as Class View
+* Exports directly as tag-specific CSS
+
+#### **E. Scale Generator (Experimental)**
+
+* Generate font scales based on:
+
+  * Ratio (e.g., 1.25, 1.33)
+  * Base size (e.g., 1rem)
+  * Number of steps up/down
+* Automatically fill in the Class view table
+
+#### **F. Live Preview Panel**
+
+* Renders each font size side-by-side
+* Highlights selected class/tag
+* Preview text editable
+
+#### **G. Export Options**
+
+* **Push to Theme Custom CSS** (adds to Customizer > Additional CSS)
+* **Copy Class** and **Copy All** (to clipboard)
+* **Export JSON** and **Import JSON** for data persistence and sharing
+
+---
+
+### **4. Accessibility and Best Practices**
+
+* Uses REM as default for accessibility and scalability
+* Built-in line-height controls
+* No fixed pixel dimensions in final output
+* Responsive from mobile to desktop widths
+
+---
+
+### **5. WordPress Integration**
+
+* Admin-only interface, accessible under the menu: **Font Clamp**
+* Plugin folder structure:
+
+  ```
+  font-clamp-calculator/
+  ├── css/
+  ├── js/
+  ├── includes/
+  │   ├── admin-page.php
+  │   └── handlers.php
+  └── font-clamp-calculator.php
+  ```
+* Proper enqueueing of scripts and styles
+* Uses native WordPress hooks (`admin_menu`, `admin_enqueue_scripts`)
+
+---
+
+### **6. Technologies Used**
+
+* HTML5, CSS3
+* Vanilla JavaScript (ES6+)
+* PHP (WordPress API)
+* JSON for data persistence
+
+---
+
+### **7. Future Enhancements (Optional)**
+
+* User-defined breakpoints
+* Dark mode toggle
+* Typography presets (Material UI, Tailwind, Bootstrap-inspired scales)
+* Integration with Elementor or theme builders
+* Option to save presets to theme files or child themes
+
+---
+
+### **8. Deliverables**
+
+* Fully functional ZIP plugin: `font-clamp-calculator-complete.zip`
+* Editable source code structured per WordPress standards
+* README or inline help file (planned)
+* All source assets including styles, JS, and admin views
+
+---
+
+### **9. Licensing & Ownership**
+
+All plugin files and intellectual property rights belong to Revrot Web Design Ireland unless otherwise specified.
+
+---
+
+**End of Scope Document**

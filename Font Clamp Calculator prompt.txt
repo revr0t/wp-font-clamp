@@ -1,0 +1,126 @@
+
+
+### ✅ AI Plugin Build Prompt: Font Clamp Calculator
+
+**Prompt Title:**
+Build Full Font Clamp Calculator WordPress Plugin from Spec and Source
+
+**Prompt Body:**
+
+---
+
+I'm uploading two files:
+
+1. **`Font Clamp Calculator WordPress Plugin Scope.txt`**
+   → This is a detailed scope document describing the complete feature set, UI structure, and best practices for a WordPress plugin that generates fluid font sizes using `clamp()` and `rem`.
+
+2. **`original Fint Clam Code.txt`**
+   → This is the original plugin code source, provided for reference only (not for direct use). The code worked initially but lacked full functionality, styling, and robust structure.
+
+---
+
+### 🔧 Your task
+
+Using the **scope document** as the definitive blueprint, build and return a complete, working, installable WordPress plugin as a `.zip` file.
+
+---
+
+### ✅ Must-Have Features
+
+Implement the plugin based **entirely** from the scope file with the following:
+
+#### A. Interface
+
+* Tabbed navigation with **Class / Tag / Scale** views
+* Clean UI styled using modern layout: buttons, shadows, preview areas, spacing
+* Responsive, accessible layout using REM-based scaling
+
+#### B. Settings Panel
+
+* Input Unit: REM (default) or PX
+* Root Font Size: default to `16px`
+* Viewport Min/Max Width: default to `375px` and `1100px`
+* Use REM units by default for accessibility and consistency
+
+#### C. Class View
+
+* Table with columns:
+
+  * Class name
+  * Min size (rem)
+  * Max size (rem)
+  * Line height
+* Editable, sortable table rows
+* `clamp()` CSS code generated live
+* Live preview next to each class
+
+#### D. Tag View
+
+* Same functionality mapped to HTML tags (h1–h6, p, li, blockquote)
+* Exports tag-specific CSS blocks
+
+#### E. Scale View
+
+* Inputs: base size + ratio
+* Calculates full scale using exponential steps up/down
+* Auto-fills Class table based on result
+
+#### F. Output & Export
+
+* Real-time CSS output block
+* “Copy All CSS” and “Copy Per Class” buttons
+* Push CSS to Customizer (Customizer > Additional CSS)
+* JSON import/export functionality
+
+---
+
+### ⚙️ WordPress Structure
+
+Build using standard WordPress plugin structure:
+
+```
+font-clamp-calculator/
+├── font-clamp-calculator.php
+├── includes/
+│   ├── admin-page.php
+│   └── handlers.php
+├── js/
+│   └── script.js
+├── css/
+│   └── style.css
+```
+
+Use `admin_menu` and `admin_enqueue_scripts` to integrate.
+
+---
+
+### 📋 Best Practice Defaults
+
+Ensure the plugin **automatically loads** the following best-practice defaults for all users:
+
+| Setting        | Default    |
+| -------------- | ---------- |
+| Unit Type      | `rem`      |
+| Root Font Size | `16px`     |
+| Viewport Min   | `375px`    |
+| Viewport Max   | `1100px`   |
+| Line Height    | `1.4` (em) |
+
+These values must populate the UI immediately on first load.
+
+---
+
+### 🧩 Deliverable
+
+Return a **fully packaged ZIP**:
+
+* WordPress-ready (upload via WP admin)
+* All features implemented from scratch (do not use broken placeholder code)
+* Fully styled and interactive
+* Tested against current WordPress admin UI
+
+If any questions arise about prioritisation, trust the **scope document** over the original code.
+
+---
+
+Let me know if you'd like this rewritten for a specific AI platform (like GPT with Code Interpreter, GitHub Copilot, or a local LLM runner like Ollama or LM Studio).
